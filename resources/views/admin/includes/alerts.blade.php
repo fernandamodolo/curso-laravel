@@ -1,4 +1,12 @@
-<div class="alert">
-    <p>Alert  - {{$content ?? ''}}</p> 
-    <!-- verifica se existe mesmo a variavel q ta mandando, se nao existir coloca um valor default -->
-</div>
+@if($errors->any())
+    <div class="alert alert-warning">
+    <ul>
+            @foreach($errors->all() as $error)
+            
+            <li>{{ $error }}</li>
+
+            @endforeach
+        </ul>
+    </div>
+
+    @endif

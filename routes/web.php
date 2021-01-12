@@ -1,7 +1,7 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
-
+Route::any('products/search','ProductController@search')->name('products.search');
 Route::resource('products','ProductController'); //->middleware('auth')
 /*
 Route::delete('products/{id}','ProductController@destroy')->name('products.destroy');
